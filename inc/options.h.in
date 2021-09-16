@@ -1,0 +1,25 @@
+#ifndef __OPTIONS_H
+#define __OPTIONS_H
+
+// This file contains options used in hardware code
+// Other options go to options.sw.h to avoid (long)
+// useless compilation of accelerators
+
+// Xilinx custom types
+#include "ap_int.h"
+#include "ap_fixed.h"
+
+#define DATA_T @DATA_T@
+typedef DATA_T data_t;
+
+#define N @N@
+
+#cmakedefine NODSP
+
+#define OPADD 1
+#define OPEWMUL 2
+#define OPMAC 3
+#define OPMUL 4
+#define OPERATION @OPERATION@
+
+#endif // __OPTIONS_H
